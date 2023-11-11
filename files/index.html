@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <title>MediaBlogs</title>
+</head>
+
+<body>
+  <h1>MediaBlogs</h1>
+  <div class="container">
+    <div class="container login-block">
+      <!-- login section content here -->
+      <div class="text"><b>MediaBlogs Login </b></div>
+      <form action="#">
+        <div class="information">
+          <label for="loggedinname">Name</label>
+          <input type="text" name="name" id="loggedinname">
+        </div>
+        <div class="information">
+          <label for="loggedinemail">Email</label>
+          <input type="email" name="email" id="loggedinemail">
+        </div>
+        <div class="information">
+          <label for="loggedinPassword">Password</label>
+          <input type="password" name="password" id="loggedinPassword">
+        </div>
+        <div class="thebutton">
+          <button onclick="login()">login</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+  <!-- Register section content here -->
+  <div class="container">
+    <div class="container register-blocks">
+    </div>
+    <div class="text"><b> Register</b></div>
+    <form action="#">
+      <div class="information">
+        <label for="nameid">Name</label>
+        <input type="text" name="name" id="nameid">
+      </div>
+      <div class="information">
+        <label for="emailid">Email</label>
+        <input type="email" name="email" id="emailid">
+      </div>
+      <div class="information">
+        <label for="passwordid">Password</label>
+        <input type="password" name="password2" id="passwordid">
+      </div>
+
+      <div class="thebutton">
+        <button onclick="register()">Register</button>
+      </div>
+
+    </form>
+  </div>
+  <!-- profile content here -->
+  <div class="container-two">
+    <h2>Profile</h2>
+    <img src="Images/profile.png" alt="profilepic">
+    <h3>Current User: <span id="thenameis"></span></h3>
+  </div>
+
+  <script>
+    // Retreiving form the local storage
+    const thename = localStorage.getItem("thenameis");
+    document.querySelector("#thenameis").textContent = thename;
+  </script>
+
+  <div class="container">
+    <div class="container register-blocks">
+    </div>
+    <div class="text"><b> Blog</b></div>
+    <form action="#">
+      <div class="information">
+        <label for="usersid">Users_id</label>
+        <input type="text" name="userss" id="usersid">
+      </div>
+      <div class="information">
+        <label for="Titleid">Title</label>
+        <input type="text" name="title" id="Titleid">
+      </div>
+      <div class="information">
+        <label for="Descriptionid">Description</label>
+        <input type="text" name="Description" id="Descriptionid">
+      </div>
+      <div class="thebutton">
+        <button onclick="blog()">Add Blog</button>
+      </div>
+      </form>
+  </div>
+  <script src="JavaScipt/client.js"> </script>
+</body>
+
+</html>
